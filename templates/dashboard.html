@@ -1,15 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>User Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            background: #ff4b2b;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #ff1e00;
+        }
+
+        /* Dashboard Content */
+        .container {
+            padding: 40px;
+        }
+
+        .welcome {
+            margin-bottom: 30px;
+        }
+
+        .welcome h1 {
+            margin-bottom: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome to Dashboard 🎉</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>Secure Web App</h2>
+        <a href="/logout">Logout</a>
+    </div>
 
-    <p>You are successfully logged in.</p>
+    <!-- Dashboard -->
+    <div class="container">
+        <div class="welcome">
+            <h1>User Dashboard</h1>
+            <p>You are successfully logged in 🔐</p>
+        </div>
 
-    <a href="/logout">Logout</a>
+        <div class="cards">
+            <div class="card">
+                <h3>🔒 Account Security</h3>
+                <p>Your account is protected using hashed passwords and session-based login.</p>
+            </div>
+
+            <div class="card">
+                <h3>👤 User Role</h3>
+                <p>You are logged in as a <b>standard user</b> with limited access.</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Activity Status</h3>
+                <p>No suspicious activity detected. System running normally.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Settings</h3>
+                <p>Profile and security settings will be available in future updates.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

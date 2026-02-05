@@ -60,6 +60,7 @@ Password: admin123
 ---
 
 ## Project Structure
+```bash
 secure-web-app
 │── app.py
 │── database.db
@@ -73,6 +74,7 @@ secure-web-app
     ├── register.html
     ├── dashboard.html
     └── admin.html
+```
 
  ---
 
